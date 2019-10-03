@@ -1,0 +1,111 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.wrapper {
+  position: fixed;
+}
+
+.container {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 200px;
+  top: 100px;
+  background: #c4c4c4;
+  transform: rotateY(-20deg);
+  transform-origin: center left;
+  background: url('https://cdn.dribbble.com/users/989466/screenshots/6493524/uniblitz-application-icons-dribbble-alex-pasquarella_2x.png')
+    center no-repeat;
+  background-size: cover;
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.28);
+}
+
+.container1 {
+  background: url('https://cdn.dribbble.com/users/989466/screenshots/6493524/uniblitz-application-icons-dribbble-alex-pasquarella_2x.png');
+}
+
+.container2 {
+  background: url('https://cdn.dribbble.com/users/1626229/screenshots/6467647/the-wind-of-change.jpg');
+}
+
+.container3 {
+  background: url('https://cdn.dribbble.com/users/15687/screenshots/6480282/hovercar-drib_2x.png');
+}
+
+.App:hover .container3 {
+  animation-name: slideBack;
+  animation-duration: 1.8s;
+  animation-fill-mode: forwards;
+}
+
+.App:hover .container2 {
+  animation-name: slideForw2;
+  animation-duration: 1.8s;
+  animation-fill-mode: forwards;
+}
+
+.App:hover .container1 {
+  animation-name: slideForw1;
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards;
+}
+
+.wrapper {
+  perspective: 2000px;
+  transform-style: preserve-3d;
+  transform-origin: center left;
+}
+
+@keyframes slideBack {
+  0% {
+    transform: rotateY(-20deg) translateZ(60px) translateX(-50px)
+      translateY(50px);
+  }
+  30% {
+    transform: rotateY(-20deg) translateZ(60px) translateX(0) translateY(-400px);
+  }
+  60% {
+    transform: rotateY(-20deg) translateZ(0) translateX(0) translateY(0);
+  }
+  100% {
+    transform: rotateY(-20deg) translateZ(0) translateX(0) translateY(0);
+  }
+}
+
+@keyframes slideForw2 {
+  0% {
+    transform: rotateY(-20deg) translateZ(50px) translateX(-20px)
+      translateY(20px);
+  }
+  5% {
+    transform: rotateY(-20deg) translateZ(50px) translateX(-20px)
+      translateY(20px);
+  }
+  60% {
+    transform: rotateY(-20deg) translateZ(60px) translateX(-50px)
+      translateY(50px);
+  }
+  100% {
+    transform: rotateY(-20deg) translateZ(60px) translateX(-50px)
+      translateY(50px);
+  }
+}
+
+@keyframes slideForw1 {
+  0% {
+    transform: rotateY(-20deg);
+  }
+  5% {
+    transform: rotateY(-20deg);
+  }
+  60% {
+    transform: rotateY(-20deg) translateZ(50px) translateX(-20px)
+      translateY(20px);
+  }
+  100% {
+    transform: rotateY(-20deg) translateZ(50px) translateX(-20px)
+      translateY(20px);
+  }
+}
